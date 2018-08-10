@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageButton
+        android:id="@+id/ibminus"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/restarcantidad"
+        android:onClick="onClickMinusQuantity"
+        app:srcCompat="@drawable/ic_minus" />
+
+    <EditText
+        android:id="@+id/etcantidad"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/_1" />
+
+    <ImageButton
+        android:id="@+id/ibplus"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/sumarcantidad"
+        android:onClick="onClickPlusQuantity"
+        app:srcCompat="@drawable/ic_plus" />
+
+</LinearLayout>

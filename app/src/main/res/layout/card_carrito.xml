@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardviewcarrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin">
+
+            <ImageView
+                android:id="@+id/imedicamentocarrito"
+                android:layout_width="106dp"
+                android:layout_height="101dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/imagen_del_medicamento"
+                android:src="@mipmap/ic_launcher_round"/>
+
+            <TextView
+                android:id="@+id/cardtvnombrecarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imedicamentocarrito"
+                android:layout_below="@+id/imedicamentocarrito"
+                android:layout_marginTop="-8dp"
+                android:text="@string/nombre"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cardtvdescripcioncarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imedicamentocarrito"
+                android:layout_below="@+id/cardtvnombrecarrito"
+                android:text="@string/descripcion" />
+
+            <TextView
+                android:id="@+id/cardtvformulacarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imedicamentocarrito"
+                android:layout_below="@+id/cardtvdescripcioncarrito"
+                android:text="@string/formula" />
+
+            <TextView
+                android:id="@+id/cardtvpreciocarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imedicamentocarrito"
+                android:layout_below="@+id/cardtvsaborcarrito"
+                android:text="@string/precio" />
+
+            <TextView
+                android:id="@+id/cardtvsaborcarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imedicamentocarrito"
+                android:layout_below="@+id/cardtvformulacarrito"
+                android:text="@string/sabor" />
+
+            <TextView
+                android:id="@+id/cardtvtotalcarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300dp"
+                android:layout_alignTop="@+id/cardtvpreciocarrito"
+                android:text="@string/total" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MNaturalActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:title="@string/app_name"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/tvusario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Christopher Espinoza" />
+
+            <ImageButton
+                android:id="@+id/btncatalogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/catalogo"
+                android:onClick="onclickcatalogo"
+                android:src="@android:drawable/ic_menu_view" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_mnatural" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fabmenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:menu_fab_label="Opciones"
+            app:menu_colorNormal="@color/colorPrimary">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabsave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:onClick="create"
+                android:src="@android:drawable/ic_menu_save"
+                app:fab_label="Guardar"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:onClick="delete"
+                android:src="@android:drawable/ic_menu_delete"
+                app:fab_label="Borrar"
+                app:fab_colorNormal="@color/colorPrimary"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabcamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@android:drawable/ic_menu_camera"
+                app:fab_label="Tomar Foto"
+                app:fab_colorNormal="@color/colorPrimary"/>
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
